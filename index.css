@@ -128,13 +128,12 @@ span{
 
 .info{
     display: flex;
-    padding: 30px;
-    width: 97%;
+    padding: 2vw;
     margin: auto;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2vh;
-    gap: 3vw 10vw;
+    gap: 3vw;
 }
 
 .CONJ{
