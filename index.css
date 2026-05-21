@@ -3,10 +3,11 @@
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  margin: 0;
 }
 
 body{
-    background-color: rgb(189, 189, 189);
+     background-color: white;
 }
 
 .all{
@@ -19,7 +20,8 @@ body{
 .menu{
     background: none;
     display: flex;
-    justify-content: space-evenly;
+    background-color: beige;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -111,7 +113,8 @@ span{
     border: none;
     border-radius: 0.5vw;
     transition: 0.4s;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
+    margin-top: 3vw;
 }
 
 .seemore:hover{
