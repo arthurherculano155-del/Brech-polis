@@ -92,7 +92,7 @@ span{
 }
 
 .text{
-    font-size: 0.6vw;
+    font-size: 1vw;
     max-width: 30px;
     width: 34.5vw;
     margin: 0px 30px;
@@ -104,7 +104,8 @@ span{
 }
 
 .seemore{
-    width: 20vw;
+    width: 5vw;
+    max-width: 20vw;
     padding: 0.7vw;
     background-color: blue;
     color: white;
