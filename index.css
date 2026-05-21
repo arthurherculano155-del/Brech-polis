@@ -148,3 +148,15 @@ span{
 .CONJ img{
     border-radius: 20px;
 }
+
+.info a{
+    text-decoration: none;
+    color: black;
+}
+
+.info a:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+    color: blue;
+    text-decoration: underline;
+}
