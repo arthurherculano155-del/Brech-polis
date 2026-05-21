@@ -1,0 +1,149 @@
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body{
+    background-color: rgb(189, 189, 189);
+}
+
+.all{
+    margin: auto;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.menu{
+    background: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: white;
+    align-items: center;
+}
+
+.links a{
+    color: grey;
+    font-size: 1.4vw;
+    max-width: 1200px;
+    text-decoration: none;
+}
+
+.links a:hover{
+    transition: 0.3s;
+    color: black;
+    text-decoration: underline;
+}
+
+.oi{
+    position: relative;
+    align-items: center;
+}
+
+.drop a{
+    color: rgb(43, 42, 42);
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+.drop a:hover{
+    background-color: black;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.drop{
+    position: absolute;
+    top: 100%;
+    width: 7vw;
+    display: none;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.oi:hover .drop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span{
+    color: blue;
+}
+
+.foto{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(231, 222, 222);
+    padding: 2vw;
+    align-items: center;
+}
+
+.text{
+    font-size: 1.5vw;
+    width: 34.5vw;
+    margin: 0px 30px;
+    text-align: justify;
+}
+
+.rou img{
+    border-radius: 2vw;
+}
+
+.seemore{
+    width: 20vw;
+    padding: 0.7vw;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    transition: 0.4s;
+}
+
+.seemore:hover{
+    background-color: white;
+    color: blue;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.oii{
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 50px 0px;
+}
+
+.CONJ{
+    display: flex;
+    background-color: white;
+    text-align: center;
+    width: 24vw;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 10px 20px grey;
+}
+
+.CONJ img{
+    border-radius: 20px;
+}
