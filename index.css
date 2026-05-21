@@ -10,14 +10,8 @@ body{
      background-color: whitesmoke;
 }
 
-.all{
-    margin: auto;
-    background-color: white;
-    margin: auto;
-    border-radius: 10px;
-}
-
 .menu{
+    background-color: white;
     background: none;
     display: flex;
     justify-content: space-around;
