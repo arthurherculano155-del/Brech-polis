@@ -92,9 +92,9 @@ span{
 }
 
 .text{
-    font-size: 1vw;
-    max-width: 30px;
-    width: 34.5vw;
+    font-size: 1.12vw;
+    width: 25vw;
+    max-width: 34vw;
     margin: 0px 30px;
     text-align: justify;
 }
@@ -104,7 +104,7 @@ span{
 }
 
 .seemore{
-    width: 5vw;
+    width: 10vw;
     max-width: 20vw;
     padding: 0.7vw;
     background-color: blue;
@@ -131,7 +131,7 @@ span{
     padding: 30px;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 2vh;
     gap: 50px 0px;
 }
 
