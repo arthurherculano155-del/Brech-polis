@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Eclipse Set - Brechópolis</title>
+    <link rel="stylesheet" href="conj1.css">
+</head>
+<body>
+    <section class="all">
+        <div class="pai">
+        <img src="Roupa.png" alt="" style="width: 30vw;">
+    <h1>Urban Eclipse Set</h1>
+    <p id="Tung"> R$ 182,09</p>
+    </div>
+
+    
+    <div class="calcular">
+        <h2>Parcelar em quantas vezes?</h2>
+        <input type="text" id="Parcelas" placeholder="Quantidade de parcelas"> <br>
+        <button onclick="resultado()">Calcular</button>
+        <p id="Res"></p>
+    </div>
+    </section>
+
+
+    <script>
+        function resultado(){
+            let n1= Number(182.09);
+            let n2 = Number(document.getElementById("Parcelas").value)
+
+            let result = n1 / n2;
+
+            if(n2 === 0){
+                document.getElementById("Res").innerText = `R$ ${n1.toFixed(2)}`;
+            } else{
+                document.getElementById("Res").innerText = `R$ ${(result).toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>
