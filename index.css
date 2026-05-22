@@ -158,3 +158,8 @@ span{
     color: blue;
     text-decoration: underline;
 }
+
+button{
+    padding: 10vh;
+    margin: 0px 20px;
+}
