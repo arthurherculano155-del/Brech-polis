@@ -153,7 +153,7 @@ span{
 }
 
 .info a:hover{
-    transform: scale(1.1);
+    transform: translateY(-10px);
     transition: 0.2s;
     color: blue;
     text-decoration: underline;
