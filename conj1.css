@@ -27,7 +27,6 @@
     display: flex;
     width: 30%;
     height: 35vw;
-    top: 3vw;
     flex-direction: column;
     justify-content: center;
     border: 2px solid gray;
@@ -36,6 +35,7 @@
     text-align: center;
     position: fixed;
     right: 5px;
+    top: 50%;
 }
 
 input{
