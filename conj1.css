@@ -10,6 +10,13 @@
     overflow: hidden;
     font-size: 1.5vw;
     text-align: center;
+    width: 30vw;
+}
+
+.oi{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
 }
 
 .calcular{
@@ -18,12 +25,17 @@
     font-size: 2vw;
     box-shadow: 10px 0px 30px grey;
     display: flex;
+    width: 30%;
+    height: 35vw;
+    top: 3vw;
     flex-direction: column;
     justify-content: center;
     border: 2px solid gray;
     border-radius: 2vw;
     margin: 10px;
     text-align: center;
+    position: fixed;
+    right: 5px;
 }
 
 input{
@@ -39,4 +51,8 @@ input{
 
 .Tung{
     color: lime;
+}
+
+.button{
+    height: 300vw;
 }
