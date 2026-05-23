@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjuntos - Brechópolis</title>
     <link rel="stylesheet" href="conj1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="oi">
         <div class="pai">
         <img src="Roupa.png" alt="" style="width: 25vw;">
-    <h2>Urban Eclipse Set</h2>
+    <h2>Urban Eclipse <br> Set</h2>
     <p id="Tung"> R$ 182,09</p>
     </div>
         <div class="pai">
         <img src="Roupa2.png" alt="" style="width: 25vw;">
-    <h2>Mosshadow Motion</h2>
+    <h2>Mosshadow Motion Set</h2>
     <p id="Tung"> R$ 190,90</p>
     </div>
         <div class="pai">
@@ -24,6 +27,8 @@
     <p id="Tung"> R$ 150,00</p>
     </div>
     </section>
+
+    <br><br>
 
     <div class="calcular">
         <h2>Parcelar em quantas vezes?</h2>
@@ -37,15 +42,13 @@
         function resultado(){
             let n1;
             let n2 = Number(document.getElementById("Parcelas").value);
-
             
-
             let conj = document.getElementById("Conj").value.toLowerCase();
 
             if(conj.toLowerCase() === "urban eclipse set"){
                 n1 = 182.09;
                 let a = calculo(n1, n2);
-            }else if(conj.toLowerCase() === "mosshadow motion"){
+            }else if(conj.toLowerCase() === "mosshadow motion set"){
                 n1 = 190.90;
                 let a = calculo(n1, n2);
             } else if(conj.toLowerCase() === "shadow motion set"){
