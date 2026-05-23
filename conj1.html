@@ -9,40 +9,60 @@
 <body>
     <section class="oi">
         <div class="pai">
-        <img src="Roupa.png" alt="" style="width: 30vw;">
-    <h1>Urban Eclipse Set</h1>
+        <img src="Roupa.png" alt="" style="width: 25vw;">
+    <h2>Urban Eclipse Set</h2>
     <p id="Tung"> R$ 182,09</p>
     </div>
         <div class="pai">
-        <img src="Roupa.png" alt="" style="width: 30vw;">
-    <h1>Urban Eclipse Set</h1>
+        <img src="Roupa.png" alt="" style="width: 25vw;">
+    <h2>Urban Eclipse Set</h2>
     <p id="Tung"> R$ 182,09</p>
     </div>
         <div class="pai">
-        <img src="Roupa.png" alt="" style="width: 30vw;">
-    <h1>Urban Eclipse Set</h1>
+        <img src="Roupa.png" alt="" style="width: 25vw;">
+    <h2>Urban Eclipse Set</h2>
     <p id="Tung"> R$ 182,09</p>
     </div>
     </section>
-    
+
     <div class="calcular">
         <h2>Parcelar em quantas vezes?</h2>
-        <input type="text" id="Parcelas" placeholder="Quantidade de parcelas"> <br>
+        <input type="text" id="Conj" placeholder="Nome do conjunto"> <br>
+        <input type="text" id="Parcelas" placeholder="Quantidade de parcelas" required> <br>
         <button onclick="resultado()">Calcular</button>
         <p id="Res"></p>
     </div>
+    
     <script>
         function resultado(){
-            let n1= Number(182.09);
-            let n2 = Number(document.getElementById("Parcelas").value)
+            let n1;
+            let n2 = Number(document.getElementById("Parcelas").value);
 
-            let result = n1 / n2;
+            
 
+            let conj = document.getElementById("Conj").value.toLowerCase();
+
+            if(conj.toLowerCase() === "urban eclipse set"){
+                n1 = 182.09;
+                let a = calculo(n1, n2);
+            } 
+
+            else{
+            document.getElementById("Res").innerText = "Conjunto não encontrado"
+        }
+        }
+
+
+        function calculo(n1, n2){
+        let result = n1 / n2;
             if(n2 === 0){
-                document.getElementById("Res").innerText = `R$ ${n1.toFixed(2)}`;
-            } else{
-                document.getElementById("Res").innerText = `R$ ${(result).toFixed(2)}`;
+            document.getElementById("Res").innerText = `R$ ${n1.toFixed(2)}`;
+            } else if(n2 < 0){
+            document.getElementById("Res").innerText = "INSIRA UM NÚMERO NATURAL"
+            }else{
+            document.getElementById("Res").innerText = `Parcelado em ${n2}x de\nR$ ${(result).toFixed(2)}`;
             }
+            return result;
         }
     </script>
 </body>
