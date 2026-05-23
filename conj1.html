@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Eclipse Set - Brechópolis</title>
+    <title>Conjuntos - Brechópolis</title>
     <link rel="stylesheet" href="conj1.css">
 </head>
 <body>
@@ -14,14 +14,14 @@
     <p id="Tung"> R$ 182,09</p>
     </div>
         <div class="pai">
-        <img src="Roupa.png" alt="" style="width: 25vw;">
-    <h2>Urban Eclipse Set</h2>
-    <p id="Tung"> R$ 182,09</p>
+        <img src="Roupa2.png" alt="" style="width: 25vw;">
+    <h2>Mosshadow Motion</h2>
+    <p id="Tung"> R$ 190,90</p>
     </div>
         <div class="pai">
-        <img src="Roupa.png" alt="" style="width: 25vw;">
-    <h2>Urban Eclipse Set</h2>
-    <p id="Tung"> R$ 182,09</p>
+        <img src="Roupa3.png" alt="" style="width: 25vw;">
+    <h2>Shadow Motion Set</h2>
+    <p id="Tung"> R$ 150,00</p>
     </div>
     </section>
 
@@ -45,8 +45,13 @@
             if(conj.toLowerCase() === "urban eclipse set"){
                 n1 = 182.09;
                 let a = calculo(n1, n2);
+            }else if(conj.toLowerCase() === "mosshadow motion"){
+                n1 = 190.90;
+                let a = calculo(n1, n2);
+            } else if(conj.toLowerCase() === "shadow motion set"){
+                n1 = 150.50;
+                let a = calculo(n1, n2);
             } 
-
             else{
             document.getElementById("Res").innerText = "Conjunto não encontrado"
         }
@@ -59,7 +64,11 @@
             document.getElementById("Res").innerText = `R$ ${n1.toFixed(2)}`;
             } else if(n2 < 0){
             document.getElementById("Res").innerText = "INSIRA UM NÚMERO NATURAL"
-            }else{
+            } else if(n2 > 10){
+                document.getElementById("Res").innerText = "O número máximo de parcelas permitido é 10."
+            }
+            
+            else{
             document.getElementById("Res").innerText = `Parcelado em ${n2}x de\nR$ ${(result).toFixed(2)}`;
             }
             return result;

@@ -15,7 +15,7 @@ body{
 
 .pai{
     border-radius: 2vw;
-    border: 4px solid white;
+    border: 0.25vw solid white;
     width: 24vw;
     text-align: center;
     overflow: hidden;
@@ -63,7 +63,6 @@ body{
 
 .calcular input:hover{
     background-color: rgb(233, 228, 219);
-    
 }
 
 .calcular button{
