@@ -98,21 +98,21 @@ span{
 }
 
 .seemore{
-    width: 100%;
-    padding: 3%;
     background-color: blue;
+    padding: 1vw 4vw;
     color: white;
-    border: none;
     border-radius: 0.5vw;
     transition: 0.4s;
-    font-size: 0.8vw;
-    margin-top: 3vw;
+    font-size: 1vw;
+    text-decoration: none;
+    position: relative;
+    top: 2vw;
 }
 
 .seemore:hover{
     background-color: white;
     color: blue;
-    transform: scale(1.1);
+    padding: 1.5vw 5vw;
     transition: 0.4s;
 }
 
