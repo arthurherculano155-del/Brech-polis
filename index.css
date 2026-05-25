@@ -30,10 +30,10 @@ body{
     font-size: 1.4vw;
     max-width: 1200px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .links a:hover{
-    transition: 0.3s;
     color: black;
     text-decoration: underline;
 }
@@ -41,30 +41,6 @@ body{
 .oi{
     position: relative;
     align-items: center;
-}
-
-.drop a{
-    color: rgb(43, 42, 42);
-    text-decoration: none;
-    padding: 10px 0px;
-}
-
-.drop a:hover{
-    background-color: black;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-}
-
-.drop{
-    position: absolute;
-    top: 100%;
-    width: 7vw;
-    display: none;
-    padding: 10px 0px;
-    text-align: center;
-    background-color: rgb(235, 235, 235);
-    border-radius: 5px;
-    gap: 5px;
 }
 
 .oi:hover .drop{
@@ -154,11 +130,4 @@ span{
 .info a:hover{
     transform: translateY(-20px);
     transition: 0.2s;
-    color: blue;
-    text-decoration: underline;
-}
-
-button{
-    padding: 10vh;
-    margin: 0px 20px;
 }
