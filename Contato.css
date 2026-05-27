@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: rgb(26, 24, 24);
+}
+
+.text{
+    width: 100%;
+    min-height: 60vh;
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.8)),
+    url(Roupa.png);
+    background-size: cover;
+    color: white;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h1{
+    padding: 2rem;
+    font-size: 6rem;
+}
+
+.text span{
+    color: rgba(0, 119, 255);
+}
+
+.contato{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5vw;
+    padding:5vh 5vw;
+    background-color:rgb(20,20,20);
+    flex-wrap:wrap;
+}
+
+.formlario{
+    background-color:rgb(35,35,35);
+    width:35vw;
+    min-width:320px;
+    padding:3vw;
+    border-radius:1.5vw;
+    box-shadow:0px 0px 20px rgba(255,255,255,0.05);
+}
+
+.formlario h2{
+    color:white;
+    font-size:2vw;
+    margin-bottom:3vh;
+    letter-spacing:0.2vw;
+}
+
+.formlario form{
+    display:flex;
+    flex-direction:column;
+    gap:2vh;
+}
+
+.formlario input{
+    width:100%;
+    padding:1vw;
+    border:none;
+    outline:none;
+    border-radius:0.8vw;
+    background-color:rgb(50,50,50);
+    color:white;
+    font-size:1vw;
+}
+
+.formlario input::placeholder{
+    color:rgb(180,180,180);
+}
+
+.env{
+    background-color:white;
+    color:black;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+.env:hover{
+    transform:scale(1.05);
+    background-color: white;
+    color: black;
+}
+
+.formas{
+    display:flex;
+    flex-direction:column;
+    gap:3vh;
+}
+
+.botao{
+    width:22vw;
+    min-width:280px;
+    background-color:rgb(35,35,35);
+    padding:2vw;
+    border-radius:1.5vw;
+    display:flex;
+    align-items:center;
+    gap:2vw;
+    transition:0.3s;
+}
+
+.botao:hover{
+    transform:translateY(-5px);
+    background-color:rgb(45,45,45);
+}
+
+.botao a{
+    color:white;
+    text-decoration:none;
+    font-size:1.2vw;
+    font-weight:600;
+}
