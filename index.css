@@ -6,8 +6,13 @@
   margin: 0;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
      background-color: whitesmoke;
+     overflow-x: hidden;
 }
 
 .menu{
@@ -20,21 +25,22 @@ body{
 .links{
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 3rem;
+    font-size: 2rem;
     color: white;
     align-items: center;
 }
 
 .links a{
     color: grey;
-    font-size: 1.4vw;
     max-width: 1200px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: .2s;
 }
 
 .links a:hover{
     color: black;
+    transform: scale(1.03);
     text-decoration: underline;
 }
 
@@ -57,39 +63,38 @@ span{
     display: flex;
     justify-content: space-between;
     background-color: rgb(231, 222, 222);
-    padding: 2vw;
+    padding: 2rem;
     align-items: center;
 }
 
 .text{
-    font-size: 1.12vw;
-    width: 25vw;
-    max-width: 34vw;
-    margin: 0px 30px;
+    font-size: 1.3rem;
+    width: 370px;
     text-align: justify;
+    margin: 2rem 2rem;
 }
 
 .rou img{
-    border-radius: 2vw;
+    border-radius: 1rem;
+    width: 400px;
 }
 
 .seemore{
     background-color: blue;
-    padding: 1vw 4vw;
+    padding: 1.5rem;
     color: white;
-    border-radius: 0.5vw;
-    transition: 0.4s;
-    font-size: 1vw;
+    border-radius: 1rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    position: relative;
-    top: 2vw;
+    margin: auto;
+    border: none;
+    transition: 0.4s;
 }
 
 .seemore:hover{
     background-color: white;
     color: blue;
-    padding: 1.5vw 5vw;
-    transition: 0.4s;
+    transform: scale(1.1);
 }
 
 .oii{
@@ -116,7 +121,6 @@ span{
     justify-content: center;
     font-size: 1.12vw;
     border-radius: 1.5vw;
-    border: 2px solid black;
     box-shadow: 0px 10px 20px grey;
     overflow: hidden;
 }
@@ -124,10 +128,86 @@ span{
 .info a{
     text-decoration: none;
     color: black;
-    transition: 0.2s;
+    transition: ease-out 0.3s;
 }
 
 .info a:hover{
-    transform: translateY(-20px);
-    transition: 0.2s;
+    transform: translateY(-10px) 
+    scale(1.03);
+    color: blue;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px){
+    html{
+        font-size: 10px;
+    }
+
+    .menu{
+        align-items: center;
+        height: 15vh;
+    }
+
+    .menu img{
+        width: 30vw;
+    } 
+
+    .seemore{
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+        margin: 2rem 2rem 0rem;
+        border-radius: 0.5rem;
+    }
+
+    .oii{
+        font-size: 2rem;
+    }
+
+    .links{
+        gap: 1rem;
+        font-size: 1rem;
+        position: relative;
+        right: 3rem;
+    }
+
+    .text{
+        font-size: 1.3rem;
+        text-align: center;
+        gap: 3rem;
+        width: 90vw;
+    }
+
+    .foto{
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        gap: 3rem;
+        font-size: 0.1rem;
+        text-align: center;
+    }
+
+    .foto a{
+        font-size: 0.5rem;
+        margin: auto;
+    }
+
+    .foto img{
+        width: 300px;
+    }
+
+    .info{
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .info a{
+        margin: auto;
+    }
+
+    .info .CONJ{
+        width: 70vw;
+        font-size: 1.5rem;
+        border-radius: 1.5rem;
+    }
 }
