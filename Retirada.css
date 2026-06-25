@@ -1,108 +1,226 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Montserrat",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body{
-background-color:rgb(20,20,20);
-color:white;
+    background-color: rgb(20,20,20);
+    color: white;
 }
 
 .contato{
-width:100%;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:5vw;
-padding:5vh 5vw;
-flex-wrap:wrap;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 5vh 5vw;
+    flex-wrap: wrap;
 }
 
 .formlario{
-background-color:rgb(35,35,35);
-width:35vw;
-min-width:320px;
-padding:3vw;
-border-radius:1.5vw;
-box-shadow:0px 0px 20px rgba(255,255,255,0.05);
+    background-color: rgb(35,35,35);
+    width: 35vw;
+    min-width: 320px;
+    padding: 3vw;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
 
 .formlario h2{
-font-size:2vw;
-margin-bottom:3vh;
-letter-spacing:0.3vw;
+    font-size: 2vw;
+    margin-bottom: 3vh;
+    letter-spacing: 0.3vw;
 }
 
 .formlario p{
-color:rgb(190,190,190);
-margin-bottom:3vh;
-line-height:1.6;
+    color: rgb(190,190,190);
+    margin-bottom: 3vh;
+    line-height: 1.6;
 }
 
 .formlario form{
-display:flex;
-flex-direction:column;
-gap:2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
 
 .formlario input{
-width:100%;
-padding:1vw;
-border:none;
-outline:none;
-border-radius:0.8vw;
-background-color:rgb(50,50,50);
-color:white;
-font-size:1vw;
+    width: 100%;
+    padding: 1vw;
+    border: none;
+    outline: none;
+    border-radius: 0.8vw;
+    background-color: rgb(50,50,50);
+    color: white;
+    font-size: 1vw;
 }
 
 .env{
-background-color:white!important;
-color:black!important;
-font-weight:700;
-cursor:pointer;
-transition:0.3s;
+    background-color: white !important;
+    color: black !important;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .env:hover{
-transform:scale(1.03);
+    transform: scale(1.03);
 }
 
 .formas{
-display:flex;
-flex-direction:column;
-gap:3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
 }
 
 .botao{
-width:22vw;
-min-width:280px;
-background-color:rgb(35,35,35);
-padding:2vw;
-border-radius:1.5vw;
-display:flex;
-align-items:center;
-gap:2vw;
-transition:0.3s;
+    width: 22vw;
+    min-width: 280px;
+    background-color: rgb(35,35,35);
+    padding: 2vw;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    transition: 0.3s;
 }
 
 .botao:hover{
-transform:translateY(-5px);
-background-color:rgb(45,45,45);
+    transform: translateY(-5px);
+    background-color: rgb(45,45,45);
 }
 
 .botao img{
-width:5vw;
-min-width:50px;
+    width: 5vw;
+    min-width: 50px;
 }
 
 .botao a{
-color:white;
-text-decoration:none;
-font-size:1vw;
-font-weight:500;
-line-height:1.5;
+    color: white;
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px){
+
+    .contato{
+        gap: 4vw;
+    }
+
+    .formlario{
+        width: 70%;
+        padding: 4vw;
+    }
+
+    .formlario h2{
+        font-size: 3rem;
+    }
+
+    .formlario p{
+        font-size: 1.8rem;
+    }
+
+    .formlario input{
+        padding: 1.8vw;
+        font-size: 1.8rem;
+    }
+
+    .botao{
+        width: 70%;
+        padding: 2.5vw;
+    }
+
+    .botao img{
+        width: 7vw;
+    }
+
+    .botao a{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contato{
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .formlario{
+        width: 95%;
+        min-width: 0;
+        padding: 6vw;
+        border-radius: 4vw;
+    }
+
+    .formlario h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .formlario p{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .formlario input{
+        padding: 3vw;
+        font-size: 1.7rem;
+        border-radius: 2vw;
+    }
+
+    .formas{
+        width: 95%;
+    }
+
+    .botao{
+        width: 100%;
+        min-width: 0;
+        padding: 4vw;
+        border-radius: 3vw;
+        gap: 4vw;
+    }
+
+    .botao img{
+        width: 12vw;
+        min-width: 45px;
+    }
+
+    .botao a{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    .formlario h2{
+        font-size: 2.5rem;
+    }
+
+    .formlario p{
+        font-size: 1.5rem;
+    }
+
+    .formlario input{
+        font-size: 1.5rem;
+        padding: 4vw;
+    }
+
+    .botao{
+        padding: 5vw;
+    }
+
+    .botao img{
+        width: 14vw;
+    }
+
+    .botao a{
+        font-size: 1.5rem;
+    }
 }

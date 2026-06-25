@@ -1,34 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background: rgb(182, 182, 182);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .all{
     width: 95%;
-    margin: auto;
+    margin: 2rem auto;
     font-size: 10px;
     background-color: white;
     border: 0.2em solid black;
     max-width: 1400px;
     border-radius: 1.5rem;
-    box-shadow: 5px 0px 30px grey;
+    box-shadow: 5px 0 30px grey;
+    overflow: hidden;
 }
 
 p{
     font-size: 2em;
     margin: 1em;
-    align-items: center;
     text-align: justify;
 }
 
 .all img{
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     margin: 1em;
     border-radius: 0.5em;
     padding: 0.5em;
     width: 4em;
-    text-align: center;
 }
 
 .lista{
@@ -40,10 +45,11 @@ p{
     font-size: 0.6rem;
 }
 
-.all h1, 
+.all h1,
 .all h2{
     text-align: center;
     font-size: 4em;
+    margin-top: 1rem;
 }
 
 .item{
@@ -51,17 +57,16 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 1rem 2.2rem;
     margin: 1rem;
     border: 0.1rem solid black;
     border-radius: 0.8rem;
     transition: 0.3s;
+    text-align: center;
 }
 
 .item:hover{
     transform: translateY(-0.8em);
-    transition: 0.3s;
     background-color: rgba(128, 128, 128, 0.541);
 }
 
@@ -71,6 +76,7 @@ p{
 
 .feedback{
     text-align: center;
+    padding: 2rem;
 }
 
 .feedback h2{
@@ -114,4 +120,101 @@ p{
 .comentario span{
     font-weight: bold;
     font-size: 0.95rem;
+}
+
+@media (max-width: 1024px){
+
+    .all{
+        font-size: 9px;
+    }
+
+    .all h1,
+    .all h2{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1.8em;
+    }
+
+    .item{
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px){
+
+    .all{
+        width: 98%;
+        font-size: 8px;
+        border-radius: 1rem;
+    }
+
+    .all h1,
+    .all h2{
+        font-size: 3em;
+    }
+
+    p{
+        font-size: 1.8em;
+        margin: 0.8em;
+    }
+
+    .lista{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item{
+        width: 90%;
+        margin: 0.5rem 0;
+    }
+
+    .all img{
+        width: 5em;
+    }
+
+    .comentarios{
+        gap: 15px;
+    }
+
+    .comentario{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px){
+
+    .all{
+        font-size: 7px;
+    }
+
+    .all h1,
+    .all h2{
+        font-size: 2.6em;
+    }
+
+    p{
+        font-size: 1.7em;
+    }
+
+    .missao p{
+        padding: 1rem;
+    }
+
+    .feedback{
+        padding: 1rem;
+    }
+
+    .comentario{
+        padding: 18px;
+    }
+
+    .comentario h3{
+        font-size: 1rem;
+    }
+
+    .comentario span{
+        font-size: 0.85rem;
+    }
 }
