@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conjuntos - Brechópolis</title>
+        <link rel="stylesheet" href="Conjuntos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="menu">
+            <img src="brechopolis-logo.png" alt="">
+            <ul class="links">
+                <li><a href="https://www.google.com/maps/place/B.+Luxo/@-23.5317407,-46.6622659,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59d3efc9f233:0xcd7460a15000a1ec!8m2!3d-23.5317407!4d-46.6622659!16s%2Fg%2F1ptwxd6mg?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Endereço</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Conjuntos.html">Conjuntos</a></li>
+                <li><a href="Retirada.html">Retirada</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+            <button><img src="user-regular-full.svg" alt="" id="login"></button>
+        </section>
+
+        <div class="infor">
+            <h1>Conjuntos Exclusivos</h1>
+            <p>Estilo, conforto e personalidade em cada combinação</p>
+        </div>
+
+        <section class="oi">
+            <div class="pai">
+                <h6 class="destaque">EM ALTA</h6>
+                <img src="Roupa.png" alt="">
+                <h2>Urban Eclipse Set</h2>
+                <p>Estilo urbano que nunca sai de moda</p>
+                <h5 id="Tung"> R$ 182,09</h5>
+            </div>
+            <div class="pai">
+                <h6 class="destaque">MAIS VENDIDO</h6>
+                <img src="Roupa2.png" alt="">
+                <h2>Mosshadow Motion Set</h2>
+                <p>Conforto e movimento para seu dia</p>
+                <h5 id="Tung"> R$ 190,90</h5>
+            </div>
+            <div class="pai">
+                <h6 class="destaque">NOVO</h6>
+                <img src="Roupa3.png" alt="">
+                <h2>Shadow Motion Set</h2>
+                <p>Leveza e atitude a qualquer momento</p>
+                <h5 id="Tung"> R$ 150,00</h5>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="calcular">
+           <div class="calcular-apresentacao">
+                <div class="text">
+                    <img src="calculator-solid-full.svg" alt="">
+                    <p>Calculadora</p>
+                </div> 
+                
+            <br>
+            
+                <div class="informacao">
+                    <h1>Parcelar em quantas vezes?</h1>
+                    <p>Simule a melhor escolha para você!</p>
+                </div>
+           </div>
+
+           <div class="calculo">
+                
+                <div class="calculacao">
+                    <p>Valor da Compra (R$)</p>
+                    <input type="number" name="" id="valor">
+                </div>
+
+                <div class="calculacao">
+                    <p>Número de Parcelas:</p>
+                    <input type="number" name="" id="parcelas">
+                </div>
+
+                <button onclick="calcular()">Calcular</button>
+           </div>
+
+           <div class="final">
+                <div class="cardd">
+                   <img src="circle-check-regular-full.svg" alt="">
+                    
+                   <div class="inff">
+                        <h4>Valor da parcela:</h4>
+
+                        <p id="valorParcela">R$ </p>
+                   </div>
+                </div>
+
+                <div class="cardd">
+                 
+                    
+                   <div class="inff">
+                        <h4>Valor Total:</h4>
+
+                        <p id="valorTotal">R$ </p>
+                   </div>
+                </div>
+           </div>
+
+            <div class="cardd">
+                 
+                    
+                   <div class="inff">
+                        <h4>Juros:</h4>
+
+                        <p id="juros">0%</p>
+                   </div>
+                </div>
+           </div>
+
+        </section>
+
+        <script src="calculadora.js"></script>
+    </body>
+</html>
