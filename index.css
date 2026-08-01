@@ -18,20 +18,38 @@ body{
 .menu{
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+    position: fixed;
+    top: 0%;
+    z-index: 1000;
+    width: 100vw;
+}
+
+.menu button{
+    background: none;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 1000px;
+}
+
+.menu button:hover{
+    transform: scale(1.05);
 }
 
 .menu img{
-    width: 200px;
+    width: 150px;
+    margin: 0rem 4rem;
 }
 
 .links{
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
-    font-size: 2rem;
-    color: white;
+    gap: 5rem;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0);
     align-items: center;
 }
 
@@ -40,6 +58,7 @@ body{
     max-width: 1200px;
     text-decoration: none;
     transition: .2s;
+    font-weight: 600;
 }
 
 .links a:hover{
@@ -48,23 +67,45 @@ body{
     text-decoration: underline;
 }
 
+#login{
+    width: 30px;
+}
+
 span{
-    color: blue;
+    color: rgb(0, 146, 0);
 }
 
 .foto{
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(231, 222, 222);
+    background-color: rgba(226, 226, 226, 0.514);
     padding: 2rem;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
 }
 
 .text{
-    font-size: 1.3rem;
-    width: 370px;
-    text-align: justify;
+    font-size: 1.7rem;
+    width: 40.9%;
     margin: 2rem 2rem;
+}
+
+.text p{
+    margin: 2rem 0rem 0rem 0rem;
+    color: grey;
+}
+
+.dest{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 1000px;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    padding: 1rem 0rem;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    text-align: center;
 }
 
 .rou{
@@ -73,7 +114,7 @@ span{
 }
 
 .rou img{
-    width: 400px;
+    width: 600px;
     transition: 0.5s;
 }
 
@@ -82,8 +123,10 @@ span{
 }
 
 .seemore{
-    background-color: blue;
-    padding: 1.5rem 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(0, 146, 0);
+    padding: 1.4rem 4.5rem;
     color: white;
     border-radius: 0.6rem;
     font-size: 1.5rem;
@@ -94,37 +137,124 @@ span{
 }
 
 .seemore:hover{
-    background-color: white;
-    color: blue;
+    background-color: rgb(18, 61, 0);
+    color: rgb(202, 202, 202);
     transform: scale(1.1);
+}
+.seemore:active{
+    transform: scale(.95);
+    background-color: rgb(0, 29, 0);
+    color: rgb(156, 156, 156);
+}
+
+.container{
+    background-color: rgba(230, 230, 230, 0.733);
+    width: 90vw;
+    margin: 3rem auto;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    border: .5px solid rgba(0, 0, 0, 0.315);
+}
+
+.container .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    align-items: center;
+}
+
+#noBorder{
+    border: none;
+}
+
+.card h1{
+    font-size: 1.7rem;
+}
+
+.card p{
+    font-size: 1.3rem;
+    color: black;
+}
+
+.container img{
+    width: 50px;
 }
 
 .oii{
-    text-align: center;
-    font-size: 2.5vw;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.contt{
+    margin: 0 7rem;
+}
+
+.contt p{
+    color: grey;
+    font-size: 1.5rem;
+    width: 290px;
 }
 
 .info{
     display: flex;
-    padding: 2vw;
-    margin: auto;
-    justify-content: space-between;
+    margin: 5rem 0rem;
+    justify-content: center;
+    gap: 4rem 8rem;
     flex-wrap: wrap;
-    margin-top: 2vh;
-    gap: 3vw;
+    margin-top: 50px;
 }
 
 .CONJ{
-    display: flex;
-    background-color: white;
-    text-align: center;
-    width: 24vw;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0px 10px 20px grey;
+    width: 350px;
+    margin: auto;
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-align: left;
     overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 300px;
+}
+
+.CONJ img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content{
+    padding: 1rem 1rem 1.2rem 1rem;
+}
+
+.infor{
+    font-size: 1.6rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.desc{
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0 0 0.8rem 0;
+}
+
+.price{
+    display: inline-block;
+    background: rgb(0,146,0);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.6rem;
+    font-weight: 700;
+}
+
+.CONJ:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
 .info a{
@@ -134,10 +264,75 @@ span{
 }
 
 .info a:hover{
-    transform: translateY(-15px) 
-    scale(1.03);
-    color: blue;
-    text-decoration: underline;
+    transform: translateY(-8px) scale(1.02);
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer{
+    background-color: #111;
+    color: #e1e1e1;
+    padding: 3rem 2rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem;
+}
+
+.footer-content h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.ft{
+    display: flex;
+    text-align: justify;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ft p{
+    width: 70%;
+}
+
+.footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 36rem;
+    line-height: 1.7;
+    color: #c7c7c7;
+}
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-links a{
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover{
+    color: rgb(0,146,0);
+}
+
+.footer-copy{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin: 0;
 }
 
 @media (max-width: 480px){
@@ -145,20 +340,61 @@ span{
         font-size: 10px;
     }
 
+    .foto{
+        margin-top: 2050px;
+    }
+
     .menu{
         align-items: center;
-        height: 15vh;
+        height: 200px;
+        position: static;
+        flex-direction: column;
+    }
+
+    .dest{
+        margin: auto;
+    }
+
+    .links{
+        margin: auto;
     }
 
     .menu img{
-        width: 30vw;
+        width: 200px;
     } 
 
     .seemore{
         font-size: 1.5rem;
-        padding: 1rem 3rem;
+        padding: 1rem 5rem;
         margin: 2rem 2rem 0rem;
         border-radius: 0.5rem;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .container .card{
+        width: 100%;
+        border-right: none;
+    }
+
+    .contt{
+        text-align: center;
+        margin: 5rem auto;
+        width: 100vw;
+    }
+
+    .contt h1{
+        font-size: 2.3rem;
+    }
+
+    .contt p{
+        font-size: 1.3rem;
+        text-align: center;
+        width: 100vw;
     }
 
     .oii{
@@ -194,7 +430,7 @@ span{
     }
 
     .foto img{
-        width: 300px;
+        width: 280px;
     }
 
     .info{
@@ -208,8 +444,21 @@ span{
     }
 
     .info .CONJ{
-        width: 70vw;
+        width: 90vw;
         font-size: 1.5rem;
-        border-radius: 1.5rem;
+        border-radius: 1.2rem;
+        height: 325px;
+    }
+
+    .ft{
+        flex-direction: column;
+    }
+
+    .ft p{
+        text-align: center;
+    }
+
+    .footer-links{
+        margin: auto;
     }
 }
