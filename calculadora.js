@@ -2,10 +2,10 @@ function calcular(){
     let parcelas = Number(document.getElementById("parcelas").value);
     let valor = Number(document.getElementById("valor").value);
     
-    if(parcelas <= 0){
-        document.getElementById("valorParcela").innerHTML = "Impossível dividir por 0.";
+    if(parcelas <= 0 || parcelas >= 20){
+        document.getElementById("valorParcela").innerHTML = "Insira um número válido de parcelas.";
         return;
-    }
+    } 
 
     let valorParcela = valor / parcelas;
 
