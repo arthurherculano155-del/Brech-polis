@@ -12,9 +12,16 @@ function calcular(){
     let juros = 0;
     document.getElementById("juros").style.color = "lime";
 
-    if(parcelas >= 10){
+    if(parcelas >= 15){
+        juros = 0.25;
+    } else if(parcelas >= 10){
         juros = 0.15;
+    } else if(parcelas >= 5){
+        juros = 0.05;
+    }
 
+
+    if(juros > 0){
         document.getElementById("juros").style.color = "red";
 
         valor += (valor * juros);

@@ -14,6 +14,7 @@ body{
     background-color: rgb(37, 36, 36);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .menu{
@@ -282,6 +283,7 @@ body{
         flex-wrap: wrap;
         padding: 1rem 2rem;
         gap: 1rem;
+        flex-direction: column;
     }
 
     .menu img{
