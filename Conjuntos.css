@@ -119,7 +119,7 @@ body{
     width: 27%;
     overflow: hidden;
     font-size: 1.5rem;
-    transition: ease-out .4s;
+    transition: ease-out .3s;
     background-color: black;
     color: white;
     border: 1px solid rgb(160, 112, 40);
