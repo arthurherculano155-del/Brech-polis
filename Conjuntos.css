@@ -20,7 +20,7 @@ body{
 }
 
 .menu{
-    background-color: rgba(29, 29, 29, 0.95);
+    background-color: rgb(29, 29, 29);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,7 +105,7 @@ body{
 }
 
 .infor{
-    margin-top: 120px;
+    margin-top: 140px;
     font-size: 2rem;
     text-align: center;
 }
