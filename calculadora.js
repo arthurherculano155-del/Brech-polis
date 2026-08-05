@@ -1,5 +1,9 @@
 function calcular(){
+
+    document.getElementById("valorParcela").style.fontSize = "2rem";
+
     let parcelas = Number(document.getElementById("parcelas").value);
+
     let valor = Number(document.getElementById("valor").value);
     
     if(parcelas <= 0 || parcelas >= 20){    
@@ -13,6 +17,8 @@ function calcular(){
 
         return;
     }
+
+
 
         let valorParcela = valor / parcelas;
 
