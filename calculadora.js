@@ -41,9 +41,19 @@ function calcular(){
             valorParcela += (valorParcela * juros);
         }
 
+        let valorFinalParcela = Math.trunc(valorParcela * 100) / 100;
+
+        let valorFinalTotal= Math.trunc(valor * 100) / 100;
+
 
         document.getElementById("juros").innerHTML = `${juros*100}%`;
-        document.getElementById("valorParcela").innerText = `R$ ${valorParcela.toFixed(2)}`;
-        document.getElementById("valorTotal").innerText = `R$ ${valor.toFixed(2)}`;
+        document.getElementById("valorParcela").innerText = `R$ ${valorFinalParcela.toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`;
+        document.getElementById("valorTotal").innerText = `R$ ${valorFinalTotal.toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`;
 
 }
