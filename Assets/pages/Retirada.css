@@ -1,13 +1,91 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
 }
 
 body{
     background-color: rgb(20,20,20);
     color: white;
+}
+
+html{
+    font-size: 10px;
+}
+
+.menu{
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 1.2rem 2rem;
+    gap: 1rem;
+    backdrop-filter: blur(14px);
+}
+
+.menu button{
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 0.75rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.menu button:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.menu img{
+    width: 145px;
+    margin: 0;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    font-size: 1.55rem;
+}
+
+.links li{
+    list-style: none;
+}
+
+.links a{
+    color: #f4f4f5;
+    padding: 0.9rem 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    font-weight: 600;
+}
+
+.links a:hover{
+    color: #ffffff;
+    transform: translateY(-1px);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#login{
+    width: 30px;
 }
 
 .contato{
@@ -19,6 +97,8 @@ body{
     gap: 5vw;
     padding: 5vh 5vw;
     flex-wrap: wrap;
+
+    margin-top: 70px;
 }
 
 .formlario{
@@ -108,6 +188,22 @@ body{
 }
 
 @media (max-width: 1024px){
+        .menu{
+        position: static;
+        align-items: center;
+        padding: 1rem 1.6rem;
+    }
+
+    .menu img{
+        width: 130px;
+    }
+
+    .links{
+        gap: 1.2rem;
+        font-size: 1.45rem;
+        justify-content: center;
+        width: 100%;
+    }
 
     .contato{
         gap: 4vw;
@@ -146,6 +242,42 @@ body{
 }
 
 @media (max-width: 768px){
+
+    .menu{
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 1rem 0.9rem;
+        gap: 0.8rem;
+    }
+
+    .menu img{
+        margin: 0 auto;
+    }
+
+    .links{
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0.8rem 0;
+    }
+
+    .links li{
+        width: 100%;
+    }
+
+    .links a{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0.95rem 1rem;
+    }
+
+    .menu button{
+        align-self: flex-end;
+        margin-top: 0.2rem;
+    }
 
     .contato{
         flex-direction: column;
@@ -198,6 +330,47 @@ body{
 }
 
 @media (max-width: 480px){
+
+     html{
+        font-size: 9px;
+    }
+
+    .menu{
+        align-items: center;
+        position: static;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem 1rem 0.8rem;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .links{
+        width: 100%;
+        margin: 0.8rem 0 0;
+        padding: 0.5rem 0;
+        flex-direction: column;
+        gap: 0.8rem;
+        background: rgba(15, 23, 42, 0.95);
+        border-radius: 1.2rem;
+    }
+
+    .menu img{
+        width: 170px;
+        margin: 0 auto;
+    }
+
+    .links li{
+        width: 100%;
+    }
+
+    .links a{
+        padding: 1rem 0.8rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+    }
 
     .formlario h2{
         font-size: 2.5rem;
