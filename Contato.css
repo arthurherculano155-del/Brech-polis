@@ -19,6 +19,10 @@ body {
     overflow-x: hidden;
 }
 
+.tela{
+    animation: fade-in 3s;
+}
+
 .menu {
     background-color: rgb(29, 29, 29);
     display: flex;
@@ -94,7 +98,7 @@ body {
 
 .text {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 123px;
     min-height: 60vh;
     background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.8)),
         url(Roupa.png);
@@ -410,6 +414,18 @@ body {
 
     .botao a {
         font-size: 1.6rem;
+    }
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateY(45px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

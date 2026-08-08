@@ -16,6 +16,10 @@ body{
     color: white;
 }
 
+.tela{
+    animation: fade-in 3s;
+}
+
 html{
     font-size: 10px;
 }
@@ -330,6 +334,18 @@ html{
 
     .botao a{
         font-size: 1.7rem;
+    }
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateY(45px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
