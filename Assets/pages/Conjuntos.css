@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -6,20 +6,20 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
 }
 
-body{
+body {
     background: linear-gradient(135deg, rgb(0, 0, 0) 0%,
-    rgb(27, 27, 27) 50%,
-    rgb(70, 70, 70) 100%);
+            rgb(27, 27, 27) 50%,
+            rgb(70, 70, 70) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
 
-.menu{
+.menu {
     background-color: rgb(29, 29, 29);
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@ body{
     backdrop-filter: blur(14px);
 }
 
-.menu button{
+.menu button {
     background: rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: center;
@@ -48,17 +48,17 @@ body{
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.menu button:hover{
+.menu button:hover {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.14);
 }
 
-.menu img{
+.menu img {
     width: 145px;
     margin: 0;
 }
 
-.links{
+.links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,11 +67,11 @@ body{
     font-size: 1.55rem;
 }
 
-.links li{
+.links li {
     list-style: none;
 }
 
-.links a{
+.links a {
     color: #f4f4f5;
     padding: 0.9rem 1.2rem;
     border-radius: 1rem;
@@ -80,18 +80,18 @@ body{
     font-weight: 600;
 }
 
-.links a:hover{
+.links a:hover {
     color: #ffffff;
     transform: translateY(-1px);
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-#login{
+#login {
     width: 30px;
 }
 
-.destaque{
+.destaque {
     width: auto;
     font-size: 1.3rem;
     position: absolute;
@@ -104,33 +104,33 @@ body{
     margin: 1rem;
 }
 
-.infor{
+.infor {
     margin-top: 140px;
     font-size: 2rem;
     text-align: center;
 }
 
-.infor h1{
+.infor h1 {
     color: white;
     font-weight: 600;
 }
 
-.infor p{
+.infor p {
     color: rgba(255, 255, 255, 0.514);
     font-size: 1.5rem;
 }
 
-.oi{
+.oi {
     display: flex;
     justify-content: space-evenly;
 }
 
-.pai img{
+.pai img {
     width: 100%;
     height: 380px;
 }
 
-.pai{
+.pai {
     border-radius: 15px;
     cursor: default;
     margin: 3rem 0rem;
@@ -143,12 +143,12 @@ body{
     border: 1px solid rgb(160, 112, 40);
 }
 
-.pai p{
+.pai p {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.664);
 }
 
-#Tung{
+#Tung {
     background: rgb(0, 146, 0);
     width: 100px;
     font-size: 1.5rem;
@@ -159,16 +159,15 @@ body{
 }
 
 .pai h2,
-.pai p{
+.pai p {
     margin: 1rem 2rem;
 }
 
-.pai:hover{
-    transform: translateY(-10px) 
-    scale(1.03);
+.pai:hover {
+    transform: translateY(-10px) scale(1.03);
 }
 
-.calcular{
+.calcular {
     color: white;
     font-size: 2rem;
     display: flex;
@@ -180,18 +179,18 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.432);
 }
 
-.calcular-apresentacao{
+.calcular-apresentacao {
     width: 30%;
     margin: 1rem;
     border-right: 1px solid rgba(255, 255, 255, 0.37);
 }
 
-.calcular-apresentacao img{
+.calcular-apresentacao img {
     width: 15%;
 }
 
 
-.text{
+.text {
     display: flex;
     font-size: 1.4rem;
     color: rgb(129, 90, 30);
@@ -200,16 +199,16 @@ body{
     align-items: end;
 }
 
-.informacao h1{
+.informacao h1 {
     font-size: 3rem;
 }
 
-.informacao p{
+.informacao p {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.575);
 }
 
-.calculo{
+.calculo {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -217,7 +216,7 @@ body{
     flex-wrap: wrap;
 }
 
-.calculo button{
+.calculo button {
     background-color: rgba(0, 0, 0, 0.281);
     color: white;
     border: 1px solid white;
@@ -227,23 +226,23 @@ body{
     transition: .2s ease-out;
 }
 
-.calculo button:hover{
+.calculo button:hover {
     transform: scale(1.05);
 }
 
-.calculo button:active{
+.calculo button:active {
     transform: scale(.95);
     background-color: black;
     color: grey;
 }
 
-.calculacao{
+.calculacao {
     font-size: 1.4rem;
     color: rgb(126, 77, 31);
     font-weight: 600;
 }
 
-.calculacao input{
+.calculacao input {
     margin-top: 10px;
     color: white;
     height: 35px;
@@ -254,7 +253,7 @@ body{
     border: 0.5px solid rgba(255, 255, 255, 0.445);
 }
 
-.final{
+.final {
     width: 50%;
     background-color: rgba(0, 0, 0, 0.267);
     margin: 0 5rem;
@@ -265,84 +264,84 @@ body{
     justify-content: space-around;
 }
 
-.cardd{
+.cardd {
     display: flex;
     color: rgb(126, 77, 31);
     gap: 1rem;
 }
 
-.inff h4{
+.inff h4 {
     font-weight: 1000;
     font-size: 1.4rem;
 }
 
-.inff p{
+.inff p {
     font-weight: 800;
     font-size: 2rem;
 }
 
-.final img{
+.final img {
     width: 50px;
     align-items: center;
 }
 
-#juros{
+#juros {
     color: lime;
     text-align: center;
 }
 
 #valorParcela,
-#valorTotal{
+#valorTotal {
     color: lime;
 }
 
-.tela{
+.tela {
     animation: fade-in 3s;
 }
 
-@keyframes fade-in{
-    from{
+@keyframes fade-in {
+    from {
         opacity: 0;
         transform: translateY(45px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
 
-    .menu{
+    .menu {
         position: static;
         align-items: center;
         padding: 1rem 1.6rem;
     }
 
-    .menu img{
+    .menu img {
         width: 130px;
     }
 
-    .links{
+    .links {
         gap: 1.2rem;
         font-size: 1.45rem;
         justify-content: center;
         width: 100%;
     }
 
-    .oi{
+    .oi {
         flex-wrap: wrap;
         gap: 4vw;
     }
 
-    .calcular{
+    .calcular {
         flex-direction: column;
         width: 90vw;
         padding: 2rem;
     }
 
-    .calcular-apresentacao{
+    .calcular-apresentacao {
         width: 100%;
         margin: 0 0 1.5rem 0;
         border-right: none;
@@ -350,20 +349,20 @@ body{
         padding-bottom: 1.5rem;
     }
 
-    .calculo{
+    .calculo {
         gap: 2rem;
     }
 
-    .final{
+    .final {
         width: 100%;
         margin: 1rem 0 0 0;
         padding: 1.5rem;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .menu{
+    .menu {
         position: static;
         flex-direction: column;
         align-items: stretch;
@@ -371,11 +370,11 @@ body{
         gap: 0.8rem;
     }
 
-    .menu img{
+    .menu img {
         margin: 0 auto;
     }
 
-    .links{
+    .links {
         flex-direction: column;
         text-align: center;
         gap: 0.8rem;
@@ -383,77 +382,77 @@ body{
         padding: 0.8rem 0;
     }
 
-    .links li{
+    .links li {
         width: 100%;
     }
 
-    .links a{
+    .links a {
         width: 100%;
         display: block;
         text-align: center;
         padding: 0.95rem 1rem;
     }
 
-    .menu button{
+    .menu button {
         align-self: flex-end;
         margin-top: 0.2rem;
     }
 
-    .oi{
+    .oi {
         flex-direction: column;
         align-items: center;
         gap: 6vw;
         margin-top: 8vw;
     }
 
-    .pai{
+    .pai {
         width: 90%;
         font-size: 4vw;
         border-radius: 4vw;
     }
 
     .pai h2,
-    .pai p{
+    .pai p {
         margin: 3vw;
     }
 
-    .pai img{
+    .pai img {
         width: 100%;
         height: auto;
         display: block;
     }
 
-    .infor{
+    .infor {
         margin-top: 140px;
         font-size: 1.8rem;
         padding: 0 1rem;
     }
 
-    .calcular{
+    .calcular {
         width: 96vw;
         padding: 2rem;
     }
 
-    .calcular-apresentacao{
+    .calcular-apresentacao {
         padding-bottom: 1rem;
     }
 
-    .informacao h1{
+    .informacao h1 {
         font-size: 2.4rem;
     }
 
-    .informacao p{
+    .informacao p {
         font-size: 1.2rem;
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
-    html{
+    html {
         font-size: 9px;
     }
 
-    .menu{
+    .menu {
         align-items: center;
         position: static;
         top: 0;
@@ -464,7 +463,7 @@ body{
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .links{
+    .links {
         width: 100%;
         margin: 0.8rem 0 0;
         padding: 0.5rem 0;
@@ -474,42 +473,42 @@ body{
         border-radius: 1.2rem;
     }
 
-    .menu img{
+    .menu img {
         width: 170px;
         margin: 0 auto;
     }
 
-    .links li{
+    .links li {
         width: 100%;
     }
 
-    .links a{
+    .links a {
         padding: 1rem 0.8rem;
         width: 100%;
         text-align: center;
         font-size: 1.4rem;
     }
 
-    .infor{
+    .infor {
         font-size: 1.6rem;
         padding: 0 1rem;
         margin-top: 11rem;
     }
 
-    .infor h1{
+    .infor h1 {
         font-size: 3rem;
     }
 
-    .infor p{
+    .infor p {
         font-size: 1.5rem;
     }
 
-    .oi{
+    .oi {
         gap: 4rem;
         margin-top: 6vw;
     }
 
-    .pai{
+    .pai {
         width: 90%;
         border: 1px solid rgb(112, 55, 9);
         font-size: 3.5vw;
@@ -517,40 +516,40 @@ body{
     }
 
     .pai h2,
-    .pai p{
+    .pai p {
         margin: 2.5vw;
     }
 
-    .calcular{
+    .calcular {
         width: 100vw;
         padding: 1.5rem;
         border-radius: 0;
     }
 
-    .calcular-apresentacao{
+    .calcular-apresentacao {
         margin: 0;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.37);
         padding-bottom: 1rem;
     }
 
-    .calculo{
+    .calculo {
         gap: 1.2rem;
     }
 
-    .calculacao input{
+    .calculacao input {
         width: 100%;
         padding: 1rem;
     }
 
-    .final{
+    .final {
         width: 100%;
         margin: 1rem 0 0 0;
         padding: 1rem;
         border-radius: 0;
     }
 
-    .final img{
+    .final img {
         width: 40px;
     }
 }
