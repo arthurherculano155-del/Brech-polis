@@ -73,7 +73,7 @@ body{
     border-radius: 1rem;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .links a:hover{
@@ -149,17 +149,17 @@ span{
     text-decoration: none;
     margin: 3rem 0rem 0rem;
     border: none;
-    transition: 0.4s;
+    transition: .3s;
 }
 
 .seemore:hover{
-    background-color: rgb(18, 61, 0);
+    background-color: rgb(27, 88, 0);
     color: rgb(202, 202, 202);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .seemore:active{
-    transform: scale(.95);
-    background-color: rgb(0, 29, 0);
+    transform: scale(.96);
+    background-color: rgb(0, 78, 0);
     color: rgb(156, 156, 156);
 }
 
@@ -231,7 +231,7 @@ span{
     text-align: left;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform .4s ease, box-shadow 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: stretch;

@@ -81,7 +81,7 @@ body {
     border-radius: 1rem;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .links a:hover {

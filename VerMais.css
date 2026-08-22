@@ -259,6 +259,7 @@ hr {
   padding: 0.9rem 1.2rem;
   background: #0c4700;
   font-weight: 600;
+  transition: .2s;
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
