@@ -1,19 +1,96 @@
 import './Home.scss';
-import Menu from '../../Components/Shared/Menu/menu.jsx'
+import { Link } from 'react-router-dom';
+
+import Menu from '../../Components/Shared/Menu/menu.jsx';
 import Rodape from '../../Components/Shared/Rodape/rodape.jsx';
 
 export default function Home() {
+
+    const beneficios = [
+        {
+            icone: "fa-solid fa-truck-fast",
+            titulo: "Frete Rápido",
+            descricao: "Entregas para todo Brasil"
+        },
+        {
+            icone: "fa-solid fa-shield-halved",
+            titulo: "Segurança",
+            descricao: "Seus dados protegidos"
+        },
+        {
+            icone: "fa-solid fa-money-bill-trend-up",
+            titulo: "Troca Fácil",
+            descricao: "Até 7 dias para trocas"
+        },
+        {
+            icone: "fa-solid fa-headset",
+            titulo: "Atendimento",
+            descricao: "Suporte via WhatsApp"
+        }
+    ];
+
+    const produtos = [
+        {
+            id: 1,
+            nome: "Eclipse Wear Essential Black",
+            descricao: "Corte clássico, tecido macio e caimento confortável.",
+            preco: "129,90",
+            imagem: "/Assets/Images/Camisa2.png",
+            rota: "/produto/eclipse-wear"
+        },
+        {
+            id: 2,
+            nome: "Essential Moss Streetwear Club",
+            descricao: "Toque macio e corte moderno, perfeita para looks casuais.",
+            preco: "149,90",
+            imagem: "/Assets/Images/Camisa3.png",
+            rota: "/produto/essential-moss"
+        },
+        {
+            id: 3,
+            nome: "Midnight Drift Urban Wear Club",
+            descricao: "Design minimalista com acabamento premium para uso diário.",
+            preco: "159,90",
+            imagem: "/Assets/Images/Camisa4.png",
+            rota: "/produto/midnight-drift"
+        },
+        {
+            id: 4,
+            nome: "Urban Phantom Cargo Pants",
+            descricao: "Bolsos utilitários e corte confortável para o dia a dia.",
+            preco: "219,90",
+            imagem: "/Assets/Images/Calca.png",
+            rota: "/produto/urban-phantom"
+        },
+        {
+            id: 5,
+            nome: "Adidas Shadow Motion Pants",
+            descricao: "Tecido leve com elasticidade para liberdade de movimento.",
+            preco: "189,90",
+            imagem: "/Assets/Images/Calca2.png",
+            rota: "/produto/adidas-shadow"
+        },
+        {
+            id: 6,
+            nome: "Concrete Flow Wide Pants",
+            descricao: "Modelagem ampla para conforto e estilo contemporâneo.",
+            preco: "167,67",
+            imagem: "/Assets/Images/Calca3.png",
+            rota: "/produto/concrete-flow"
+        }
+    ];
+
     return (
         <div className="Inicio">
 
-        <Menu />
-
+            <Menu />
 
             <main className="tela">
 
                 <section className="foto">
 
                     <div className="text">
+
                         <h1 className="dest">
                             MODA CONSCIENTE
                         </h1>
@@ -32,14 +109,13 @@ export default function Home() {
                             com mais autenticidade.
                         </p>
 
-                        <button
+                        <Link
+                            to="/vermais"
                             className="seemore"
-                            onClick={() => {
-                                window.location.href = "/vermais";
-                            }}
                         >
                             VER MAIS
-                        </button>
+                        </Link>
+
                     </div>
 
                     <div className="rou">
@@ -54,64 +130,29 @@ export default function Home() {
 
                 <section className="container">
 
-                    <div className="card">
+                    {beneficios.map((beneficio, index) => (
+                        <div
+                            className="card"
+                            id={index === beneficios.length - 1 ? "noBorder" : ""}
+                            key={index}
+                        >
 
-                        <i className="fa-solid fa-truck-fast"></i>
+                            <i className={beneficio.icone}></i>
 
-                        <div className="text">
-                            <h1>Frete Rápido</h1>
+                            <div className="text">
 
-                            <p>
-                                Entregas para todo Brasil
-                            </p>
+                                <h1>
+                                    {beneficio.titulo}
+                                </h1>
+
+                                <p>
+                                    {beneficio.descricao}
+                                </p>
+
+                            </div>
+
                         </div>
-
-                    </div>
-
-
-                    <div className="card">
-
-                        <i className="fa-solid fa-shield-halved"></i>
-
-                        <div className="text">
-                            <h1>Segurança</h1>
-
-                            <p>
-                                Seus dados protegidos
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div className="card">
-
-                        <i className="fa-solid fa-money-bill-trend-up"></i>
-
-                        <div className="text">
-                            <h1>Troca Fácil</h1>
-
-                            <p>
-                                Até 7 dias para trocas
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div className="card" id="noBorder">
-
-                        <i className="fa-solid fa-headset"></i>
-
-                        <div className="text">
-                            <h1>Atendimento</h1>
-
-                            <p>
-                                Suporte via WhatsApp
-                            </p>
-                        </div>
-
-                    </div>
+                    ))}
 
                 </section>
 
@@ -131,195 +172,45 @@ export default function Home() {
 
                 <section className="info">
 
-                    <a href="/produto/eclipse-wear">
+                    {produtos.map((produto) => (
+                        <Link
+                            to={produto.rota}
+                            key={produto.id}
+                        >
+                            <div className="CONJ">
 
-                        <div className="CONJ">
+                                <img
+                                    src={produto.imagem}
+                                    alt={produto.nome}
+                                />
 
-                            <img
-                                src="/Assets/Images/Camisa2.png"
-                                alt="Eclipse Wear Essential Black"
-                            />
+                                <div className="card-content">
 
-                            <div className="card-content">
+                                    <h2 className="infor">
+                                        {produto.nome}
+                                    </h2>
 
-                                <h2 className="infor">
-                                    Eclipse Wear Essential Black
-                                </h2>
+                                    <p className="desc">
+                                        {produto.descricao}
+                                    </p>
 
-                                <p className="desc">
-                                    Corte clássico, tecido macio e
-                                    caimento confortável.
-                                </p>
+                                    <p className="price">
+                                        R$ {produto.preco}
+                                    </p>
 
-                                <p className="price">
-                                    R$ 129,90
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <a href="/produto/essential-moss">
-
-                        <div className="CONJ">
-
-                            <img
-                                src="/Assets/Images/Camisa3.png"
-                                alt="Essential Moss Streetwear Club"
-                            />
-
-                            <div className="card-content">
-
-                                <h2 className="infor">
-                                    Essential Moss Streetwear Club
-                                </h2>
-
-                                <p className="desc">
-                                    Toque macio e corte moderno,
-                                    perfeita para looks casuais.
-                                </p>
-
-                                <p className="price">
-                                    R$ 149,90
-                                </p>
+                                </div>
 
                             </div>
 
-                        </div>
-
-                    </a>
-
-
-                    <a href="/produto/midnight-drift">
-
-                        <div className="CONJ">
-
-                            <img
-                                src="/Assets/Images/Camisa4.png"
-                                alt="Midnight Drift Urban Wear Club"
-                            />
-
-                            <div className="card-content">
-
-                                <h2 className="infor">
-                                    Midnight Drift Urban Wear Club
-                                </h2>
-
-                                <p className="desc">
-                                    Design minimalista com acabamento
-                                    premium para uso diário.
-                                </p>
-
-                                <p className="price">
-                                    R$ 159,90
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <a href="/produto/urban-phantom">
-
-                        <div className="CONJ">
-
-                            <img
-                                src="/Assets/Images/Calca.png"
-                                alt="Urban Phantom Cargo Pants"
-                            />
-
-                            <div className="card-content">
-
-                                <h2 className="infor">
-                                    Urban Phantom Cargo Pants
-                                </h2>
-
-                                <p className="desc">
-                                    Bolsos utilitários e corte confortável
-                                    para o dia a dia.
-                                </p>
-
-                                <p className="price">
-                                    R$ 219,90
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <a href="/produto/adidas-shadow">
-
-                        <div className="CONJ">
-
-                            <img
-                                src="/Assets/Images/Calca2.png"
-                                alt="Adidas Shadow Motion Pants"
-                            />
-
-                            <div className="card-content">
-
-                                <h2 className="infor">
-                                    Adidas Shadow Motion Pants
-                                </h2>
-
-                                <p className="desc">
-                                    Tecido leve com elasticidade para
-                                    liberdade de movimento.
-                                </p>
-
-                                <p className="price">
-                                    R$ 189,90
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <a href="/produto/concrete-flow">
-
-                        <div className="CONJ">
-
-                            <img
-                                src="/Assets/Images/Calca3.png"
-                                alt="Concrete Flow Wide Pants"
-                            />
-
-                            <div className="card-content">
-
-                                <h2 className="infor">
-                                    Concrete Flow Wide Pants
-                                </h2>
-
-                                <p className="desc">
-                                    Modelagem ampla para conforto e
-                                    estilo contemporâneo.
-                                </p>
-
-                                <p className="price">
-                                    R$ 167,67
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
+                        </Link>
+                    ))}
 
                 </section>
 
                 <Rodape />
+
             </main>
+
         </div>
     );
 }
