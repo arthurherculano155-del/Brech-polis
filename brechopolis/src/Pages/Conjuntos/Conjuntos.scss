@@ -1,0 +1,977 @@
+.Conjuntos {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Montserrat", sans-serif;
+    color: #151515;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(160, 112, 40, 0.045),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7f7f7 100%
+        );
+
+    overflow-x: hidden;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .tela {
+        width: 100%;
+        min-height: 100vh;
+
+        padding-top: 1px;
+
+        animation: fade-in 0.7s ease;
+
+        .apresentacao-conjuntos {
+            width: min(1120px, 90%);
+
+            margin: 125px auto 0;
+
+            text-align: center;
+
+            .mini-titulo {
+                display: none;
+            }
+
+            h1 {
+                color: #161616;
+
+                font-size: 30px;
+                font-weight: 800;
+
+                letter-spacing: -0.6px;
+
+                span {
+                    color: rgb(0, 146, 0);
+                }
+            }
+
+            p {
+                margin-top: 7px;
+
+                color: #777;
+
+                font-size: 13px;
+                line-height: 1.6;
+            }
+        }
+
+        .lista-conjuntos {
+            width: min(1120px, 91%);
+
+            margin: 35px auto 65px;
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            gap: 26px;
+
+            .produto {
+                height: 410px;
+
+                display: flex;
+                flex-direction: column;
+
+                overflow: hidden;
+
+                background: #fff;
+
+                border: 1px solid rgba(129, 88, 36, 0.18);
+                border-radius: 15px;
+
+                box-shadow: 0 7px 20px rgba(0, 0, 0, 0.055);
+
+                transition:
+                    transform 0.28s ease,
+                    border-color 0.28s ease,
+                    box-shadow 0.28s ease;
+
+                .imagem-produto {
+                    position: relative;
+
+                    width: 100%;
+                    height: 265px;
+
+                    flex-shrink: 0;
+
+                    overflow: hidden;
+
+                    .destaque {
+                        position: absolute;
+
+                        top: 13px;
+                        left: 13px;
+
+                        z-index: 2;
+
+                        padding: 7px 16px;
+
+                        border-radius: 999px;
+
+                        background: rgba(113, 74, 28, 0.94);
+
+                        color: #fff;
+
+                        font-size: 10px;
+                        font-weight: 800;
+
+                        letter-spacing: 0.5px;
+
+                        backdrop-filter: blur(6px);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                        display: block;
+
+                        object-fit: cover;
+
+                        transition: transform 0.4s ease;
+                    }
+                }
+
+                .produto-info {
+                    height: 145px;
+
+                    padding: 15px 17px 16px;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        margin-bottom: 6px;
+
+                        color: #171717;
+
+                        font-size: 16px;
+                        font-weight: 750;
+
+                        line-height: 1.3;
+                    }
+
+                    p {
+                        flex: 1;
+
+                        color: #777;
+
+                        font-size: 11.5px;
+                        line-height: 1.5;
+                    }
+
+                    .preco {
+                        width: fit-content;
+
+                        padding: 6px 10px;
+
+                        background: rgb(0, 146, 0);
+
+                        border-radius: 6px;
+
+                        color: #fff;
+
+                        font-size: 12px;
+                        font-weight: 800;
+
+                        box-shadow: 0 4px 10px rgba(0, 146, 0, 0.13);
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+
+                    border-color: rgba(129, 88, 36, 0.38);
+
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+                    .imagem-produto {
+                        img {
+                            transform: scale(1.025);
+                        }
+                    }
+                }
+            }
+        }
+
+        .calcular {
+            width: min(1160px, 92%);
+
+            margin: 0 auto 70px;
+            padding: 28px;
+
+            display: grid;
+            grid-template-columns:
+                250px
+                minmax(260px, 1fr)
+                minmax(350px, 420px);
+
+            gap: 28px;
+
+            align-items: stretch;
+
+            color: #f5f5f5;
+
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(0, 146, 0, 0.06),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #080808 0%,
+                    #0e0e0e 55%,
+                    #111411 100%
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: 18px;
+
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+
+            .calcular-apresentacao {
+                padding-right: 27px;
+
+                display: flex;
+                flex-direction: column;
+
+                border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+                .calculadora-titulo {
+                    display: flex;
+                    align-items: center;
+
+                    gap: 9px;
+
+                    i {
+                        width: 34px;
+                        height: 34px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        border-radius: 9px;
+
+                        background: rgba(184, 129, 51, 0.1);
+
+                        color: rgb(190, 132, 49);
+
+                        font-size: 17px;
+                    }
+
+                    span {
+                        color: rgb(190, 132, 49);
+
+                        font-size: 11px;
+                        font-weight: 800;
+
+                        letter-spacing: 0.7px;
+                    }
+                }
+
+                .informacao {
+                    margin-top: 23px;
+
+                    h1 {
+                        max-width: 220px;
+
+                        color: #f5f5f5;
+
+                        font-size: 22px;
+                        line-height: 1.2;
+
+                        font-weight: 800;
+
+                        letter-spacing: -0.4px;
+                    }
+
+                    p {
+                        max-width: 220px;
+
+                        margin-top: 10px;
+
+                        color: rgba(255, 255, 255, 0.46);
+
+                        font-size: 11px;
+                        line-height: 1.6;
+                    }
+                }
+
+                .limites {
+                    margin-top: 25px;
+
+                    display: grid;
+
+                    gap: 7px;
+
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        gap: 10px;
+
+                        padding-bottom: 6px;
+
+                        border-bottom:
+                            1px solid rgba(255, 255, 255, 0.055);
+
+                        span {
+                            color: rgba(255, 255, 255, 0.7);
+
+                            font-size: 9.5px;
+                            font-weight: 700;
+                        }
+
+                        p {
+                            color: rgba(255, 255, 255, 0.36);
+
+                            font-size: 9.5px;
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+
+            .calculo {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                gap: 17px;
+
+                .calculacao {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        margin-bottom: 7px;
+
+                        color: rgb(190, 132, 49);
+
+                        font-size: 11px;
+                        font-weight: 750;
+                    }
+
+                    .input-container {
+                        position: relative;
+
+                        width: 100%;
+
+                        display: flex;
+                        align-items: center;
+
+                        > span,
+                        > i {
+                            position: absolute;
+
+                            left: 14px;
+
+                            z-index: 2;
+
+                            color: rgba(255, 255, 255, 0.4);
+
+                            font-size: 12px;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 43px;
+
+                            padding: 0 14px 0 42px;
+
+                            outline: none;
+
+                            border:
+                                1px solid rgba(255, 255, 255, 0.15);
+
+                            border-radius: 8px;
+
+                            background: rgba(255, 255, 255, 0.035);
+
+                            color: #f5f5f5;
+
+                            font-family: inherit;
+                            font-size: 13px;
+
+                            transition:
+                                border-color 0.22s ease,
+                                background 0.22s ease,
+                                box-shadow 0.22s ease;
+
+                            &::placeholder {
+                                color: rgba(255, 255, 255, 0.28);
+                            }
+
+                            &:hover {
+                                border-color:
+                                    rgba(190, 132, 49, 0.45);
+                            }
+
+                            &:focus {
+                                background:
+                                    rgba(255, 255, 255, 0.055);
+
+                                border-color:
+                                    rgb(190, 132, 49);
+
+                                box-shadow:
+                                    0 0 0 3px
+                                    rgba(190, 132, 49, 0.1);
+                            }
+                        }
+                    }
+                }
+
+                .acoes {
+                    margin-top: 5px;
+
+                    display: flex;
+
+                    gap: 9px;
+
+                    button {
+                        min-height: 42px;
+
+                        border-radius: 8px;
+
+                        font-family: inherit;
+                        font-size: 12px;
+                        font-weight: 750;
+
+                        cursor: pointer;
+
+                        transition:
+                            transform 0.2s ease,
+                            background 0.2s ease,
+                            border-color 0.2s ease,
+                            box-shadow 0.2s ease;
+                    }
+
+                    .btn-calcular {
+                        flex: 2;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        gap: 7px;
+
+                        border: none;
+
+                        background: rgb(0, 146, 0);
+
+                        color: white;
+
+                        box-shadow:
+                            0 6px 15px
+                            rgba(0, 146, 0, 0.15);
+
+                        &:hover {
+                            background:
+                                rgb(0, 119, 0);
+
+                            transform: translateY(-2px);
+
+                            box-shadow:
+                                0 8px 18px
+                                rgba(0, 146, 0, 0.23);
+                        }
+
+                        &:active {
+                            transform: scale(0.97);
+                        }
+                    }
+
+                    .btn-limpar {
+                        flex: 1;
+
+                        border:
+                            1px solid rgba(255, 255, 255, 0.17);
+
+                        background:
+                            rgba(255, 255, 255, 0.045);
+
+                        color: #ddd;
+
+                        &:hover {
+                            background:
+                                rgba(255, 255, 255, 0.09);
+
+                            border-color:
+                                rgba(255, 255, 255, 0.27);
+
+                            transform: translateY(-2px);
+                        }
+
+                        &:active {
+                            transform: scale(0.97);
+                        }
+                    }
+                }
+            }
+
+            .final {
+                padding: 14px;
+
+                display: grid;
+                grid-template-columns: 1fr;
+
+                gap: 9px;
+
+                background:
+                    linear-gradient(
+                        145deg,
+                        rgba(7, 12, 8, 0.95),
+                        rgba(12, 17, 13, 0.97)
+                    );
+
+                border:
+                    1px solid rgba(255, 255, 255, 0.09);
+
+                border-radius: 13px;
+
+                .cardd {
+                    min-height: 89px;
+
+                    padding: 14px 15px;
+
+                    display: flex;
+                    align-items: center;
+
+                    gap: 14px;
+
+                    background:
+                        rgba(255, 255, 255, 0.018);
+
+                    border:
+                        1px solid rgba(255, 255, 255, 0.08);
+
+                    border-radius: 10px;
+
+                    transition:
+                        transform 0.22s ease,
+                        border-color 0.22s ease,
+                        background 0.22s ease;
+
+                    .resultado-icon {
+                        width: 38px;
+                        height: 38px;
+
+                        flex-shrink: 0;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        border-radius: 9px;
+
+                        background:
+                            rgba(190, 132, 49, 0.08);
+
+                        i {
+                            color: rgb(190, 132, 49);
+
+                            font-size: 20px;
+                        }
+                    }
+
+                    .resultado-info {
+                        width: 100%;
+
+                        > span {
+                            color: rgb(190, 132, 49);
+
+                            font-size: 11px;
+                            font-weight: 800;
+                        }
+
+                        .resultado {
+                            margin-top: 7px;
+
+                            font-weight: 800;
+
+                            line-height: 1.35;
+
+                            &.sucesso {
+                                color: #24e955;
+
+                                font-size: 17px;
+                            }
+
+                            &.erro {
+                                color: #ff5757;
+
+                                font-size: 11px;
+                            }
+
+                            &.juros-sem {
+                                color: #24e955;
+
+                                font-size: 17px;
+                            }
+
+                            &.juros-com {
+                                color: #ff5757;
+
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        transform: translateY(-2px);
+
+                        border-color:
+                            rgba(190, 132, 49, 0.18);
+
+                        background:
+                            rgba(255, 255, 255, 0.028);
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 1050px) {
+        .tela {
+            .apresentacao-conjuntos {
+                margin-top: 120px;
+            }
+
+            .lista-conjuntos {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .calcular {
+                grid-template-columns: 1fr 1fr;
+
+                .calcular-apresentacao {
+                    grid-column: 1 / -1;
+
+                    padding: 0 0 20px;
+
+                    border-right: none;
+
+                    border-bottom:
+                        1px solid rgba(255, 255, 255, 0.1);
+
+                    .informacao {
+                        margin-top: 17px;
+
+                        h1,
+                        p {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .limites {
+                        margin-top: 20px;
+
+                        grid-template-columns:
+                            repeat(5, minmax(0, 1fr));
+
+                        gap: 10px;
+
+                        div {
+                            flex-direction: column;
+
+                            align-items: flex-start;
+
+                            padding: 8px;
+
+                            background:
+                                rgba(255, 255, 255, 0.025);
+
+                            border:
+                                1px solid rgba(255, 255, 255, 0.06);
+
+                            border-radius: 7px;
+                        }
+                    }
+                }
+
+                .final {
+                    grid-column: 1 / -1;
+
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tela {
+            .apresentacao-conjuntos {
+                margin-top: 50px;
+
+                h1 {
+                    font-size: 27px;
+                }
+            }
+
+            .lista-conjuntos {
+                width: 88%;
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+                .produto {
+                    width: 100%;
+                    max-width: 480px;
+
+                    height: 400px;
+
+                    margin: auto;
+
+                    .imagem-produto {
+                        height: 260px;
+                    }
+
+                    .produto-info {
+                        height: 140px;
+                    }
+                }
+            }
+
+            .calcular {
+                width: 90%;
+
+                padding: 22px;
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                .calcular-apresentacao {
+                    grid-column: auto;
+
+                    .limites {
+                        grid-template-columns:
+                            repeat(2, minmax(0, 1fr));
+                    }
+                }
+
+                .calculo {
+                    gap: 15px;
+                }
+
+                .final {
+                    grid-column: auto;
+
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 520px) {
+        .tela {
+            .apresentacao-conjuntos {
+                width: 88%;
+
+                margin-top: 42px;
+
+                h1 {
+                    font-size: 23px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .lista-conjuntos {
+                margin-top: 27px;
+                margin-bottom: 42px;
+
+                .produto {
+                    height: 380px;
+
+                    border-radius: 13px;
+
+                    .imagem-produto {
+                        height: 245px;
+
+                        .destaque {
+                            top: 10px;
+                            left: 10px;
+
+                            padding: 6px 13px;
+
+                            font-size: 9px;
+                        }
+                    }
+
+                    .produto-info {
+                        height: 135px;
+
+                        padding: 13px 14px 14px;
+
+                        h2 {
+                            font-size: 14px;
+                        }
+
+                        p {
+                            font-size: 10.5px;
+                        }
+
+                        .preco {
+                            padding: 6px 9px;
+
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+            .calcular {
+                width: 100%;
+
+                margin-bottom: 0;
+
+                padding: 22px 17px 27px;
+
+                border-left: none;
+                border-right: none;
+
+                border-radius: 0;
+
+                .calcular-apresentacao {
+                    .calculadora-titulo {
+                        i {
+                            width: 32px;
+                            height: 32px;
+
+                            font-size: 16px;
+                        }
+
+                        span {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .informacao {
+                        h1 {
+                            font-size: 20px;
+                        }
+
+                        p {
+                            font-size: 10.5px;
+                        }
+                    }
+
+                    .limites {
+                        grid-template-columns: 1fr;
+
+                        gap: 5px;
+
+                        div {
+                            flex-direction: row;
+
+                            padding: 7px 9px;
+
+                            span,
+                            p {
+                                font-size: 9px;
+                            }
+                        }
+                    }
+                }
+
+                .calculo {
+                    gap: 13px;
+
+                    .calculacao {
+                        label {
+                            font-size: 10.5px;
+                        }
+
+                        .input-container {
+                            input {
+                                height: 43px;
+
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .acoes {
+                        flex-direction: column;
+
+                        gap: 8px;
+
+                        button {
+                            min-height: 43px;
+                        }
+                    }
+                }
+
+                .final {
+                    padding: 10px;
+
+                    .cardd {
+                        min-height: 78px;
+
+                        padding: 12px;
+
+                        .resultado-icon {
+                            width: 33px;
+                            height: 33px;
+
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .resultado-info {
+                            > span {
+                                font-size: 10px;
+                            }
+
+                            .resultado {
+                                &.sucesso,
+                                &.juros-sem,
+                                &.juros-com {
+                                    font-size: 15px;
+                                }
+
+                                &.erro {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

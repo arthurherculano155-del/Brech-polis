@@ -1,0 +1,126 @@
+.footer {
+    padding: 38px 5% 20px;
+
+    background: linear-gradient(
+        135deg,
+        #101010,
+        #181818
+    );
+
+    color: #e8e8e8;
+
+    .footer-content {
+        width: min(1150px, 100%);
+        margin: 0 auto 28px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 40px;
+
+        .ft {
+            max-width: 620px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 24px;
+
+            img {
+                width: 165px;
+            }
+
+            p {
+                max-width: 380px;
+
+                color: #bcbcbc;
+
+                font-size: 12px;
+                line-height: 1.7;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 22px;
+
+            a {
+                color: #f3f3f3;
+
+                text-decoration: none;
+
+                font-size: 13px;
+                font-weight: 600;
+
+                transition:
+                    color 0.25s ease,
+                    transform 0.25s ease;
+
+                &:hover {
+                    color: rgb(0, 190, 0);
+
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+
+    .footer-copy {
+        padding-top: 18px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        color: #777;
+
+        font-size: 11px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        .footer-content {
+            flex-direction: column;
+
+            text-align: center;
+
+            .ft {
+                flex-direction: column;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .footer {
+        padding: 35px 20px 20px;
+
+        .footer-content {
+            .ft {
+                img {
+                    width: 150px;
+                }
+
+                p {
+                    width: 100%;
+                }
+            }
+
+            .footer-links {
+                flex-direction: column;
+            }
+        }
+    }
+}
